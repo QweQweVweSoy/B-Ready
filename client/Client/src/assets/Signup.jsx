@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Signup.css' // Importing the CSS file for styles
 
-function Signup() {
+function Signup({ onSignup }) {
   const [scene, setScene] = useState(1)
   const [accountType, setAccountType] = useState('')
   const [form, setForm] = useState({
@@ -35,17 +35,14 @@ function Signup() {
   }
 
   const handleAgree = () => {
-    alert('Account created! (Demo)')
-    setScene(1)
-    setAccountType('')
-    setForm({
-      lastName: '',
-      firstName: '',
-      middleInitial: '',
-      birthday: '',
-      address: '',
-      employeeId: ''
-    })
+    // Create user data object with form data and account type
+    const userData = {
+      ...form,
+      accountType
+    };
+    
+    // Pass the user data to the parent component
+    onSignup(userData);
   }
 
   // Check if all required fields are filled
@@ -58,7 +55,15 @@ function Signup() {
     form.employeeId.trim()
 
   return (
+    
     <div className="signup-container">
+
+       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
       {scene === 1 && (
         <>
           <h2>Create your account, choose account type wisely</h2>

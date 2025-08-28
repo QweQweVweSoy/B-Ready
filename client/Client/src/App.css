@@ -1,25 +1,35 @@
 .navbar-header {
-  background: #2c3e50;
+  background: #db9443;
   color: #fff;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 0.75rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+.navbar-title {
+  font-size: 1rem;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
 .menu-btn {
-  background: #2980b9;
+  background: #ac711e;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -33,16 +43,35 @@
 }
 
 .nav-links li button {
-  background: none;
+  background: #ac711e;
   color: #fff;
   border: none;
-  font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background 0.2s;
+  padding: 0.5rem;
+  transition: opacity 0.2s;
 }
 
 .nav-links li button:hover {
-  background: #34495e;
+  opacity: 0.8;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 70px; /* height of navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 0.5rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

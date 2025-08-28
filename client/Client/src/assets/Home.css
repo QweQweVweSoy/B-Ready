@@ -1,0 +1,229 @@
+.home-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-container {
+  margin-top: 2rem;
+}
+
+.report-card {
+  display: flex;
+  background: #ac711e;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.report-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.report-details {
+  flex: 1;
+}
+
+.chatbox-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #db9443;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.chatbox-toggle:hover {
+  background: #ac711e;
+}
+
+.chatbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.chatbox-container {
+  background: rgba(225, 167, 59, 0.5);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 100vh;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbox-header {
+  margin: 2%;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.chatbox-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 0px 12px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  width: fit-content;
+}
+
+.message.received {
+  background: #c77e35;
+  align-self: flex-start;
+}
+
+.message.sent {
+  background: #db9443;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.chat-image {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.camera-view {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background: rgba(225, 167, 59, 0.8);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera-view video {
+  width: 100%;
+  max-height: 200px;
+}
+
+.camera-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.camera-controls button {
+  padding: 8px 16px;
+  background: #ac711e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chatbox-input {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chatbox-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+}
+
+.chatbox-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: #db9443;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.action-btn:hover {
+  background: #ac711e;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #db9443;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.profile-form input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.update-btn {
+  padding: 0.75rem;
+  background: #ac711e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.update-btn:hover {
+  background: #34495e;
+}
