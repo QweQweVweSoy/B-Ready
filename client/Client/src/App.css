@@ -16,42 +16,75 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 20px; /* Added 20px padding on both sides */
 }
 
 .navbar-title {
-  font-size: 1rem;
-  margin-right: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin: 0;
+  margin-left: 20px; /* 20px margin from the left */
 }
 
-.menu-btn {
-  background: #ac711e;
+.menu-icon {
+  background: none;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 4px;
+  padding: 0.5rem;
+  margin-right: 20px; /* 20px margin from the right */
 }
 
-.nav-links {
-  display: flex;
-  gap: 1rem;
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Start below the header */
+  right: 0;
+  background: #db9443;
+  width: 250px;
+  height: calc(100% - 60px); /* Full height minus header */
+  padding: 1rem;
+  z-index: 99;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-links {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 2rem;
 }
 
-.nav-links li button {
+.sidebar-links li {
+  margin-bottom: 1rem;
+}
+
+.sidebar-links button {
   background: #ac711e;
   color: #fff;
   border: none;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: left;
   cursor: pointer;
-  padding: 0.5rem;
+  border-radius: 4px;
   transition: opacity 0.2s;
 }
 
-.nav-links li button:hover {
+.sidebar-links button:hover {
   opacity: 0.8;
 }
 
@@ -70,8 +103,7 @@ main {
     padding: 0 0.5rem;
   }
   
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .sidebar {
+    width: 200px;
   }
 }
